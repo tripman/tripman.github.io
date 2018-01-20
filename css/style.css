@@ -52,7 +52,20 @@
 	body {
 		background: #fff;
 	}
-
+    #john_image{
+        width: 350px;
+        margin-right: 100px;
+/*        height: 100px;*/
+    }
+.john_sidebar{
+    margin-left: 50px;
+    margin-right: -50px;
+}
+    #addInterestButton{
+/*        height: 30px;*/
+        margin-left: 25px;
+        color: white;
+    }
     .scroll-box{
         overflow: auto; 
         height:250px; 

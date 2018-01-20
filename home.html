@@ -49,10 +49,10 @@
                     <div class="row">
                         <div class="4u">
                             <section class="">
-                                <a href="#" class="image fit"><img src="http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg" alt="" /></a>
+                                <a href="#" class="image fit" id="john_image"><img src="http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg" alt="" /></a>
                             </section>
                         </div>
-                        <div class="4u">
+                        <div class="4u john_sidebar">
                             <section>
                                 <ul style="list-style:none;margin-left:-20px;">
                                     <li>
@@ -74,7 +74,7 @@
                         <div class="4u">
                             <h3><b>INTERESTS</b></h3>
                             <div class="scroll-box">
-                                <ul style="list-style:none;margin-left:-20px;">
+                                <ul style="list-style:none;margin-left:-20px;" id="list_of_interests">
                                     <li>
                                         <a href="#" onclick="removeInterest();" class="remove-interest"> X </a>
                                         Fishing
@@ -87,46 +87,6 @@
                                         <a href="#" class="remove-interest"> X </a>
                                         Dogs
                                     </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Ok
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
-                                    <li>
-                                        <a href="#" class="remove-interest"> X </a>
-                                        Stuff
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -134,7 +94,8 @@
 					<hr class="major" />
 					<div class="row">
                         <h2>User Interests</h2>
-                        <input type="text" placeholder="Enter a new interest" name="new-interest" class="interest-box" style="width:200px;margin-left:20px;margin-top:3px;">
+                        <input type="text" placeholder="Enter a new interest" name="new_interest" class="interest-box" style="width:200px;margin-left:20px;margin-top:3px;" id="interest_box">
+                        <input type="button" class ="special" name="button_interest" onclick="addNewInterest()" id="addInterestButton" value="Add This Interest">
 					</div>
                     <div class="interest-box">
                         <section>
@@ -151,28 +112,17 @@
 						<div class="6u">
 							<div class="row collapse-at-2">
 								<div class="6u">
-									<h3>Accumsan</h3>
+									<h3>About TripMan</h3>
 									<ul class="alt">
-										<li><a href="#">Nascetur nunc varius</a></li>
-										<li><a href="#">Vis faucibus sed tempor</a></li>
-										<li><a href="#">Massa amet lobortis vel</a></li>
-										<li><a href="#">Nascetur nunc varius</a></li>
-									</ul>
-								</div>
-								<div class="6u">
-									<h3>Faucibus</h3>
-									<ul class="alt">
-										<li><a href="#">Nascetur nunc varius</a></li>
-										<li><a href="#">Vis faucibus sed tempor</a></li>
-										<li><a href="#">Massa amet lobortis vel</a></li>
-										<li><a href="#">Nascetur nunc varius</a></li>
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">Contact Us</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="6u">
-							<h2>Aliquam Interdum</h2>
-							<p>Blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan justo aliquet.</p>
+							<h2>Our Mission</h2>
+							<p>TripMan aims to make planning your next trip as easy as possible. We offer user-friendly navigation, starting from finding the best prices for flight tickets and hotels to building an itinerary curated specifically just for you. </p>
 							<ul class="icons">
 								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -183,7 +133,7 @@
 						</div>
 					</div>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li>
+						<li>&copy; TripMan. All rights reserved.</li>
 						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
 						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
 					</ul>
