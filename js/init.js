@@ -8,7 +8,7 @@ function addNewInterest(){
     
     var new_interest = document.getElementById("interest_box").value;
     
-    if(new_interest == ""){
+    if(new_interest === ""){
         console.error("Please type an interest.");
         return;
     }
@@ -16,11 +16,15 @@ function addNewInterest(){
     var list_of_interests = document.getElementById("list_of_interests");
     
     var list_entry = document.createElement("LI");
-    list_entry.innerHTML = '<a href="#" class="remove-interest"> X </a>';
+    list_entry.innerHTML = '<a href="#" onclick="removeInterest(this);" class="remove-interest"> X </a>';
     list_entry.appendChild(document.createTextNode(new_interest));
     list_of_interests.appendChild(list_entry);
     
     document.getElementById("interest_box").value = ""; //reset box
+}
+
+function removeInterest(a_element){
+    a_element.parentNode.parentNode.removeChild(a_element.parentNode);
 }
 
 (function($) {
