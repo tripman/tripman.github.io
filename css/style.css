@@ -13,7 +13,6 @@
 	body {
 		background: #fff;
 	}
-
 	body, input, select, textarea {
 		color: #555f66;
 		font-family: "Roboto", Helvetica, sans-serif;
@@ -284,7 +283,7 @@
 	input[type="password"],
 	input[type="email"],
 	select {
-		height: 2.75em;
+		height: 1.75em;
 	}
 
 	textarea {
