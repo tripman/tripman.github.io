@@ -52,6 +52,29 @@
 	body {
 		background: #fff;
 	}
+
+    .scroll-box{
+        overflow: auto; 
+        height:250px; 
+        border:1px solid lightgray; 
+        border-radius:5px;
+		font-size: 15pt;
+        
+        padding: 10px;
+    }
+    .scroll-box li{
+        padding: 15px;
+        margin:5px;
+        background-color: #629DD1;
+        color:white;
+        font-family: "Roboto", Helvetica, sans-serif;
+        font-size: 10pt;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 0.125em;
+        text-transform: uppercase;
+        border-radius: 7px;
+    }
 	body, input, select, textarea {
 		color: #555f66;
 		font-family: "Roboto", Helvetica, sans-serif;
@@ -59,6 +82,22 @@
 		font-weight: 300;
 		line-height: 1.75em;
 	}
+
+    .remove-interest{
+        font-family: monaco, Consolas, "Lucida Console", monospace;
+        padding-top: 4px;
+        font-size: 10pt;
+        font-style: bold;
+        font-variant: normal;
+        font-weight: 800;
+        font-stretch: ultra-expanded;
+        line-height: 15.4px;
+		text-decoration: none;
+        color:white;
+    }
+        .remove-interest:hover{
+            color: red;
+        }
 
 	a {
 		color: #629DD1;
@@ -328,6 +367,7 @@
 	textarea {
 		padding: 0.75em 1em;
 	}
+
 
 	input[type="checkbox"],
 	input[type="radio"] {
