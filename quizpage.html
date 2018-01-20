@@ -39,112 +39,6 @@
 				</nav>
 			</header>
 
-
-		<!-- Main -->
-		<header class="major">
-			<h2>Plan your Paradise</h2>
-			<p>Tempus adipiscing commodo ut aliquam blandit</p>
-		</header>
-		<div class="container">
-
-				<h2>Mollis ut adipiscing</h2>
-				<a href="#" class="image fit"><img src="images/banner.jpg" alt="" /></a>
-
-			<div style="float:left;margin-top:30px;"> Destination: <br/>
-			 <div style="float:right;" id="locationField">
-		      <input id="autocomplete" placeholder="Enter your destination"
-		             onFocus="geolocate()" type="text"></input>
-		   	 </div>
-			 </div>
-
-		<br />
-		<p style="float:right;padding-right:auto;"> End Date: <input type="text" id="datepicker2"></p>
-		<p style="float:right;padding-right:20px;"> Start Date: <input type="text" id="datepicker"></p>
-   		<br/>
-		<br/>
-		<br/>
-		<br/>
-			<p> Interests: </p>
-		<h4> Accommodations: </h4>
-		<div class="row">
-			<div class="quiz-selections">
-				<img src="images/hotel.jpg" alt="" width="300px" height="200px"/></a>
-				<form>
-					<input type="checkbox" name="hotelstravel" id="Hotel"><label for="hotel"></label><label>Hotel</label>
-				</form>
-			</div>
-			<div class="quiz-selections">
-				<img src="images/bed-breakfast.jpg" alt="" width="300px" height="200px"/></a>
-				<form>
-					<input type="checkbox" name="hotelstravel" id="Bed-Breakfast"><label for="Bed-Breakfast"></label><label>Bed&Breakfast</label>
-				</form>
-			</div>
-			<div class="quiz-selections">
-				<img src="images/specialty-lodging.jpg" alt="" width="300px" height="200px"/></a>
-				<form>
-					<input type="checkbox" name="hotelstravel" id="Hostels"><label for="Hostels"></label><label>Hotel</label>
-				</form>
-			</div>
-		</div>
-
-		<h4> Restaurants: </h4>
-		<div class="row">
-			<div class="quiz-selections">
-				<img src="images/fancy-rest.jpg" alt="" width="300px" height="200px"/></a>
-				<form>
-					<input type="checkbox" name="restaurants" id="Fancy-Rest"><label for="Fancy-Rest"></label><label>Restaraunts</label>
-				</form>
-			</div>
-			<div class="quiz-selections">
-				<img src="images/bed-breakfast.jpg" alt="" width="300px" height="200px"/></a>
-				<form>
-					<input type="checkbox" name="hotelstravel" id="Bed-Breakfast"><label for="Bed-Breakfast"></label><label>Bed&Breakfast</label>
-				</form>
-			</div>
-			<div class="quiz-selections">
-				<img src="images/specialty-lodging.jpg" alt="" width="300px" height="200px"/></a>
-				<form>
-					<input type="checkbox" name="hotelstravel" id="Hostels"><label for="Hostels"></label><label>Hotel</label>
-				</form>
-			</div>
-		</div>
-		<h4> Attractions: </h4>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row double">
-						<div class="6u">
-							<div class="row collapse-at-2">
-								<div class="6u">
-									<h3>About TripMan</h3>
-									<ul class="alt">
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">Contact Us</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="6u">
-							<h2>Our Mission</h2>
-							<p>TripMan aims to make planning your next trip as easy as possible. We offer user-friendly navigation, starting from finding the best prices for flight tickets and hotels to building an itinerary curated specifically just for you. </p>
-							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-							</ul>
-						</div>
-					</div>
-					<ul class="copyright">
-						<li>&copy; TripMan. All rights reserved.</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-					</ul>
-				</div>
-			</footer>
-
 			<!--script-->
 	   <script>
       // This example displays an address form, using the autocomplete feature
@@ -234,6 +128,179 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_cWFr71lF5U1FP0zp3zCP0GY2utdK_lQ&libraries=places&callback=initAutocomplete"
         async defer></script>
 
+		<!-- Main -->
+		<header class="major">
+			<h2>Plan your Paradise</h2>
+			<p>Tempus adipiscing commodo ut aliquam blandit</p>
+		</header>
+		<div class="container">
+
+				<h2>Mollis ut adipiscing</h2>
+				<a href="#" class="image fit"><img src="images/banner.jpg" alt="" /></a>
+			<p> Destination: </p>
+			 <div id="locationField">
+		      <input id="autocomplete" placeholder="Enter your destination"
+		             onFocus="geolocate()" type="text"></input>
+		    </div>
+		<br />
+		<div class="container">
+		    <div class="col-sm-6" style="height:130px;">
+		        <div class="form-group">
+		            <div class='input-group date' id='datetimepicker8'>
+		                <input type='text' class="form-control" />
+		                <span class="input-group-addon">
+		                    <span class="fa fa-calendar">
+		                    </span>
+		                </span>
+		            </div>
+		        </div>
+		    </div>
+		    <script type="text/javascript">
+		        $(function () {
+		            $('#datetimepicker8').datetimepicker({
+		                icons: {
+		                    time: "fa fa-clock-o",
+		                    date: "fa fa-calendar",
+		                    up: "fa fa-arrow-up",
+		                    down: "fa fa-arrow-down"
+		                }
+		            });
+		        });
+		    </script>
+		</div>
+
+		<!--Quiz-->
+		<p> Interests: </p>
+		<h4> Accommodations: </h4>
+		<div class="row">
+			<div class="quiz-selections">
+				<img src="images/hotel.jpg" width="300px" height="200px"/></a>
+				<form>
+						<input type="checkbox" name="hotelstravel" id="Hotel"><label for="hotel"></label><label>Hotel</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/bed-breakfast.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="hotelstravel" id="Bed-Breakfast"><label for="Bed-Breakfast"></label><label>Bed&Breakfast</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/specialty-lodging.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="hotelstravel" id="Hostels"><label for="Hostels"></label><label>Hostels</label>
+				</form>
+			</div>
+		</div>
+
+		<h4> Restaurants: </h4>
+		<div class="row">
+			<div class="quiz-selections">
+				<img src="images/fancy-rest.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="restaurants" id="Fancy-Rest"><label for="Fancy-Rest"></label><label>Restaraunts</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/cafe.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="restaurants" id="Cafe"><label for="Cafe"></label><label>Cafes</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/diners.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="restaurants" id="Diners"><label for="Diners"></label><label>Diners</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/bakeries.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="restaurants" id="Bakeries"><label for="Bakeries"></label><label>Bakeries</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/beer-wine-spirits.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="restaurants" id="Beer-Wine-Spirits"><label for="Beer-Wine-Spirits"></label><label>Beer, Wine, & Spirits</label>
+				</form>
+			</div>
+			<div class="quiz-selections">
+				<img src="images/street-vendors.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="restaurants" id="Street-Vendors"><label for="Street-Vendors"></label><label>Street Vendors</label>
+				</form>
+			</div>
+		</div>
+
+		<h4> Active Life: </h4>
+		<div class="row">
+			<div class="quiz-selections">
+				<img src="images/beach.jpg" width="300px" height="200px"/></a>
+				<form>
+					<input type="checkbox" name="active-life" id="Beach"><label for="Beach"></label><label>Beach</label>
+				</form>
+			</div>
+			<div class="row">
+				<div class="quiz-selections">
+					<img src="images/kids-activities.jpg" width="300px" height="200px"/></a>
+					<form>
+						<input type="checkbox" name="active-life" id="Kid-Activies"><label for="Kid-Activies"></label><label>Kid Activities</label>
+					</form>
+				</div>
+				<div class="quiz-selections">
+					<img src="images/climbing.jpg" width="300px" height="200px"/></a>
+					<form>
+						<input type="checkbox" name="active-life" id="Climbing"><label for="Climbing"></label><label>Climbing</label>
+					</form>
+				</div>
+		</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>Accumsan</h3>
+									<ul class="alt">
+										<li><a href="#">Nascetur nunc varius</a></li>
+										<li><a href="#">Vis faucibus sed tempor</a></li>
+										<li><a href="#">Massa amet lobortis vel</a></li>
+										<li><a href="#">Nascetur nunc varius</a></li>
+									</ul>
+								</div>
+								<div class="6u">
+									<h3>Faucibus</h3>
+									<ul class="alt">
+										<li><a href="#">Nascetur nunc varius</a></li>
+										<li><a href="#">Vis faucibus sed tempor</a></li>
+										<li><a href="#">Massa amet lobortis vel</a></li>
+										<li><a href="#">Nascetur nunc varius</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>Aliquam Interdum</h2>
+							<p>Blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan justo aliquet.</p>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
 
 	</body>
 	 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
