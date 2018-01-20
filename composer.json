@@ -1,0 +1,6 @@
+{
+	"require": {
+		"monolog/monolog": "1.0.*",
+		"kreait/firebase-php": "^3.0"
+	}
+}

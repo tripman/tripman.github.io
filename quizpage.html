@@ -21,6 +21,35 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 	</head>
+	<script>
+		  // Initialize Firebase
+		  var config = {
+				    apiKey: "AIzaSyAIfk0KAjoKmZxg5xdGjgmzcxZM69WUg-k",
+				    authDomain: "tripplanner-7031a.firebaseapp.com",
+				    databaseURL: "https://tripplanner-7031a.firebaseio.com",
+				    projectId: "tripplanner-7031a",
+				    storageBucket: "tripplanner-7031a.appspot.com",
+				    messagingSenderId: "981637759337"
+				  };
+		  firebase.initializeApp(config);
+		  // Get a reference to the database service
+		  
+		  var getval = $('#autoupdate').text();
+		  //alert(getval);
+		  var database = firebase.database();
+		  var name = "test";
+		  var email = "testsa";
+		  var userId = 14;
+		  
+		  $("#submit").click(function() 
+		  {
+		  alert("hi");
+		  firebase.database().ref('users/' + userId).set({
+		    username: getval,
+		    email: email
+		  });
+		  });
+</script>
 	<body id="top">
 
 		<!-- Header -->
@@ -92,6 +121,7 @@
 			<div class="quiz-selections">
 				<img src="images/fancy-rest.jpg" alt="" width="300px" height="200px"/></a>
 				<form>
+	
 					<input type="checkbox" name="restaurants" id="Fancy-Rest"><label for="Fancy-Rest"></label><label>Restaraunts</label>
 				</form>
 			</div>
@@ -109,6 +139,7 @@
 			</div>
 		</div>
 		<h4> Attractions: </h4>
+		<button id="submit" type="button"> Submit </button>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -145,7 +176,39 @@
 				</div>
 			</footer>
 
-			<!--script-->
+		<!--script-->
+		<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<!-- 	<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAIfk0KAjoKmZxg5xdGjgmzcxZM69WUg-k",
+		    authDomain: "tripplanner-7031a.firebaseapp.com",
+		    databaseURL: "https://tripplanner-7031a.firebaseio.com",
+		    projectId: "tripplanner-7031a",
+		    storageBucket: "tripplanner-7031a.appspot.com",
+		    messagingSenderId: "981637759337"
+		  };
+		  firebase.initializeApp(config);
+
+		  	var database = firebase.database();
+      	
+
+      function storeData()
+      {
+      	console.log("called");
+      	userId=12;
+      	var location =  $('#locationField').text();
+ 	 	var startdate = $('#datepicker').text()
+ 	 	var enddate = $('datepicker2').text();
+    		firebase.database().ref('users/' + userId).set({
+    		dest: "location",
+    		sdate: "startdate",
+    		edate: "enddate"
+  		});
+      }
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script> -->
+
 	   <script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
@@ -153,6 +216,9 @@
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+
+      	
 
       var placeSearch, autocomplete;
       var componentForm = {
@@ -219,8 +285,15 @@
             });
 
     </script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+
+<!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
