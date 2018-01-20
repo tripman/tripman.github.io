@@ -271,6 +271,36 @@
 			margin: -1em 0 2em 0;
 		}
 
+/*Animations*/
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.slideanim {
+	visibility: hidden;
+}
+.slide {
+	visibility: visible;
+}
+
 /* Form */
 
 	form {
