@@ -68,8 +68,6 @@
 				</nav>
 			</header>
 
-<<<<<<< HEAD
-
 		<!-- Main -->
 		<header class="major">
 			<h2>Plan your Paradise</h2>
@@ -108,19 +106,19 @@
 			<div class="quiz-selections">
 				<img src="images/hotel.jpg" width="300px" height="200px"/></a>
 				<form>
-						<input type="checkbox" name="hotelstravel" id="Hotel"><label for="hotel"></label><label>Hotel</label>
+						<input type="checkbox" name="hotelstravel" id="Hotel" value="Hotel"><label for="hotel"></label><label>Hotel</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/bed-breakfast.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="hotelstravel" id="Bed-Breakfast"><label for="Bed-Breakfast"></label><label>Bed&Breakfast</label>
+					<input type="checkbox" name="hotelstravel" id="Bed-Breakfast" value="Bed-Breakfast"><label for="Bed-Breakfast"></label><label>Bed&Breakfast</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/specialty-lodging.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="hotelstravel" id="Hostels"><label for="Hostels"></label><label>Hostels</label>
+					<input type="checkbox" name="hotelstravel" id="Hostels" value="Hostels"><label for="Hostels"></label><label>Hostels</label>
 				</form>
 			</div>
 		</div>
@@ -130,37 +128,37 @@
 			<div class="quiz-selections">
 				<img src="images/fancy-rest.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="restaurants" id="Fancy-Rest"><label for="Fancy-Rest"></label><label>Restaraunts</label>
+					<input type="checkbox" name="restaurants" id="Fancy-Rest" value="Fancy-Rest"><label for="Fancy-Rest"></label><label>Restaraunts</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/cafe.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="restaurants" id="Cafe"><label for="Cafe"></label><label>Cafes</label>
+					<input type="checkbox" name="restaurants" id="Cafe" value="Cafe"><label for="Cafe"></label><label>Cafes</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/diners.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="restaurants" id="Diners"><label for="Diners"></label><label>Diners</label>
+					<input type="checkbox" name="restaurants" id="Diners" value="Diners"><label for="Diners"></label><label>Diners</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/bakeries.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="restaurants" id="Bakeries"><label for="Bakeries"></label><label>Bakeries</label>
+					<input type="checkbox" name="restaurants" id="Bakeries" value="Bakeries"><label for="Bakeries"></label><label>Bakeries</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/beer-wine-spirits.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="restaurants" id="Beer-Wine-Spirits"><label for="Beer-Wine-Spirits"></label><label>Beer, Wine, & Spirits</label>
+					<input type="checkbox" name="restaurants" id="Beer-Wine-Spirits" value="Beer-Wine-Spirits"><label for="Beer-Wine-Spirits"></label><label>Beer, Wine, & Spirits</label>
 				</form>
 			</div>
 			<div class="quiz-selections">
 				<img src="images/street-vendors.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="restaurants" id="Street-Vendors"><label for="Street-Vendors"></label><label>Street Vendors</label>
+					<input type="checkbox" name="restaurants" id="Street-Vendors" value="Street-Vendors"><label for="Street-Vendors"></label><label>Street Vendors</label>
 				</form>
 			</div>
 		</div>
@@ -170,24 +168,27 @@
 			<div class="quiz-selections">
 				<img src="images/beach.jpg" width="300px" height="200px"/></a>
 				<form>
-					<input type="checkbox" name="active-life" id="Beach"><label for="Beach"></label><label>Beach</label>
+					<input type="checkbox" name="active-life" id="Beach" value="Beach"><label for="Beach"></label><label>Beach</label>
 				</form>
 			</div>
 			<div class="row">
 				<div class="quiz-selections">
 					<img src="images/kids-activities.jpg" width="300px" height="200px"/></a>
 					<form>
-						<input type="checkbox" name="active-life" id="Kid-Activies"><label for="Kid-Activies"></label><label>Kid Activities</label>
+						<input type="checkbox" name="active-life" id="Kid-Activities" value="Kid-Activities"><label for="Kid-Activies"></label><label>Kid Activities</label>
 					</form>
 				</div>
 				<div class="quiz-selections">
 					<img src="images/climbing.jpg" width="300px" height="200px"/></a>
 					<form>
-						<input type="checkbox" name="active-life" id="Climbing"><label for="Climbing"></label><label>Climbing</label>
+						<input type="checkbox" name="active-life" id="Climbing" value="Climbing"><label for="Climbing"></label><label>Climbing</label>
 					</form>
 				</div>
+				
 		</div>
-
+		<br/>
+		<div><a id="submit" href="#" class="button special">Submit</a></div>
+		
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
@@ -367,5 +368,44 @@
   </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_cWFr71lF5U1FP0zp3zCP0GY2utdK_lQ&libraries=places&callback=initAutocomplete"
         async defer></script>
+		
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDCLvHCPtoxRekAkEjTF7CjMxdi6hVEwvg",
+    authDomain: "coolcool-815c5.firebaseapp.com",
+    databaseURL: "https://coolcool-815c5.firebaseio.com",
+    projectId: "coolcool-815c5",
+    storageBucket: "",
+    messagingSenderId: "671447568645"
+  };
+  firebase.initializeApp(config);
+  // Get a reference to the database service
+  var database = firebase.database();
+  var userId = 1; //stub userID
+  
+  $("#submit").click(function() 
+  {
+  var location = $('#autocomplete').val();
+  var getdate = $('#datepicker').val();
+  var getdate2 = $('#datepicker2').val();
+ 
+  var arrayinterests = [];
+  $('input:checked').each(function () {
+    var sThisVal = ($(this).attr("id"));
+	arrayinterests.push(sThisVal);
+	});
+	
+  firebase.database().ref('userselections/' + userId).set({
+    location: location,
+    startdate: getdate,
+	enddate: getdate2,
+	arrayinterests: arrayinterests
+  });
+  });
+  
+  
+</script>
 	 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 </html>
