@@ -25,18 +25,82 @@
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1><a href="#">Ion</a></h1>
+				<h1><a href="#">TripMan</a></h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="left-sidebar.html">Left Sidebar</a></li>
-						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li>
-						<li><a href="#" class="button special">Sign Up</a></li>
+						<li><a href="about.html">About</a></li>
+        
+						<li><input placeholder="Email" type="email" class="input_text" name="header-email" id="header-email" tabindex="1"></li>
+						<li><input placeholder="Password" type="password" class="input_text" name="header-pass" id="header-pass" tabindex="2"></li>
+                        
+						<li><a href="#" class="button special">Log In</a></li>
 					</ul>
 				</nav>
 			</header>
-		<!--script-->
+		
+
+		<!-- Main -->
+		<header class="major">
+			<h2>Plan your Paradise</h2>
+			<p>Tempus adipiscing commodo ut aliquam blandit</p>
+		</header>
+		<div class="container">
+		
+				<h2>Mollis ut adipiscing</h2>
+				<a href="#" class="image fit"><img src="images/banner.jpg" alt="" /></a>
+			
+			<div style="float:left;margin-top:30px;"> Destination: <br/>
+			 <div style="float:right;" id="locationField">
+		      <input id="autocomplete" placeholder="Enter your destination"
+		             onFocus="geolocate()" type="text"></input>
+		   	 </div>
+			 </div>
+			 
+		<br />
+		<p style="float:right;"> Start Date: <input type="text" id="datepicker"></p>
+		<p style="float:right;"> End Date: <input type="text" id="datepicker2"></p>
+   		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>About TripMan</h3>
+									<ul class="alt">
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>Our Mission</h2>
+							<p>TripMan aims to make planning your next trip as easy as possible. We offer user-friendly navigation, starting from finding the best prices for flight tickets and hotels to building an itinerary curated specifically just for you. </p>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li>&copy; TripMan. All rights reserved.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+			<!--script-->
 	   <script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
@@ -124,72 +188,7 @@
   </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_cWFr71lF5U1FP0zp3zCP0GY2utdK_lQ&libraries=places&callback=initAutocomplete"
         async defer></script>
-
-		<!-- Main -->
-		<header class="major">
-			<h2>Plan your Paradise</h2>
-			<p>Tempus adipiscing commodo ut aliquam blandit</p>
-		</header>
-		<div class="container">
 		
-				<h2>Mollis ut adipiscing</h2>
-				<a href="#" class="image fit"><img src="images/banner.jpg" alt="" /></a>
-			<p> Destination: </p>	
-			 <div id="locationField">
-		      <input id="autocomplete" placeholder="Enter your destination"
-		             onFocus="geolocate()" type="text"></input>
-		   	 </div>
-		<br />
-		<p> Start Date: <input type="text" id="datepicker"></p>
-		<p> End Date: <input type="text" id="datepicker2"></p>
-   		
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row double">
-						<div class="6u">
-							<div class="row collapse-at-2">
-								<div class="6u">
-									<h3>Accumsan</h3>
-									<ul class="alt">
-										<li><a href="#">Nascetur nunc varius</a></li>
-										<li><a href="#">Vis faucibus sed tempor</a></li>
-										<li><a href="#">Massa amet lobortis vel</a></li>
-										<li><a href="#">Nascetur nunc varius</a></li>
-									</ul>
-								</div>
-								<div class="6u">
-									<h3>Faucibus</h3>
-									<ul class="alt">
-										<li><a href="#">Nascetur nunc varius</a></li>
-										<li><a href="#">Vis faucibus sed tempor</a></li>
-										<li><a href="#">Massa amet lobortis vel</a></li>
-										<li><a href="#">Nascetur nunc varius</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="6u">
-							<h2>Aliquam Interdum</h2>
-							<p>Blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan justo aliquet.</p>
-							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-							</ul>
-						</div>
-					</div>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-					</ul>
-				</div>
-			</footer>
-
 	</body>
 	 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 </html>
