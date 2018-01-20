@@ -482,6 +482,7 @@
 
 			.image.fit img {
 				display: block;
+				height: 350px;
 				width: 100%;
 			}
 
