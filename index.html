@@ -19,7 +19,9 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
+			<link rel="stylesheet" href="css/animate.min.css">
+			
+			</noscript>
 	</head>
 	<body id="top">
 
@@ -42,8 +44,8 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h2>TripMan</h2>
-					<p>A faster way to plan your stay</p>
+					<h2 class="fadeInUp animated">TripMan</h2>
+					<p class="fadeInUp animated">A faster way to plan your stay</p>
 					<ul class="actions">
 						<li><a href="signup.html" class="button big special">Sign Up</a></li>
 						<li><a href="about.html" class="button big alt">About</a></li>
@@ -58,7 +60,7 @@
 					<p>A tool that automatically plans your vacation based on your interests</p>
 				</header>
 				<div class="container">
-					<div class="row">
+					<div class="row slideanim">
 						<div class="4u">
 							<section class="special box">
 								<i class="icon fa-area-chart major"></i>
@@ -151,6 +153,19 @@
 					</ul>
 				</div>
 			</footer>
+<script>
+$(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
 
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 400) {
+          $(this).addClass("slide");
+		  $(this).addClass("animated");
+		  $(this).addClass("fadeInUp");
+        }
+    });
+	});
+</script>
 	</body>
 </html>
