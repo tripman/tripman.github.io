@@ -17,9 +17,24 @@
 // API key placeholders that must be filled in by users.
 // You can find it on
 // https://www.yelp.com/developers/v3/manage_app
-$API_KEY = NULL;
+// * wont work in FF w/ Allow-Credentials
+//if you dont need Allow-Credentials, * seems to work
+header('Access-Control-Allow-Origin: https://api.yelp.com');
+//if you need cookies or login etc
+header('Access-Control-Allow-Credentials: true');
+if ($this->getRequestMethod() == 'OPTIONS')
+{
+  header('Access-Control-Allow-Methods: GET, POST, PUT');
+  header('Access-Control-Max-Age: 604800');
+  //if you need special headers
+  header('Access-Control-Allow-Headers: x-requested-with');
+  exit(0);
+}
+
+
+$API_KEY = HicxRct53L2Rn7jwzBTJgu5OgFSM9jCaob3wIIfdOCvRbiN5_4Q7u69eBWXioeUNe6LAwmV7HtgX7UX7YNWLCTLdptk7uViGrgKDSujfwv-uWHhYb8ViKZ1XIHljWnYx;
 // Complain if credentials haven't been filled out.
-assert(HicxRct53L2Rn7jwzBTJgu5OgFSM9jCaob3wIIfdOCvRbiN5_4Q7u69eBWXioeUNe6LAwmV7HtgX7UX7YNWLCTLdptk7uViGrgKDSujfwv-uWHhYb8ViKZ1XIHljWnYx, "Please supply your API key.");
+assert($API_KEY, "Please supply your API key.");
 // API constants, you shouldn't have to change these.
 $API_HOST = "https://api.yelp.com";
 $SEARCH_PATH = "/v3/businesses/search";
@@ -71,54 +86,69 @@ function request($host, $path, $url_params = array()) {
     }
     return $response;
 }
-/**
- * Query the Search API by a search term and location 
- * 
- * @param    $term        The search term passed to the API 
- * @param    $location    The search location passed to the API 
- * @return   The JSON response from the request 
- */
-function search($term, $location) {
-    $url_params = array();
-    
-    $url_params['term'] = $term;
-    $url_params['location'] = $location;
-    $url_params['limit'] = $GLOBALS['SEARCH_LIMIT'];
-    
-    return request($GLOBALS['API_HOST'], $GLOBALS['SEARCH_PATH'], $url_params);
-}
-/**
- * Query the Business API by business_id
- * 
- * @param    $business_id    The ID of the business to query
- * @return   The JSON response from the request 
- */
-function get_business($business_id) {
-    $business_path = $GLOBALS['BUSINESS_PATH'] . urlencode($business_id);
-    
-    return request($GLOBALS['API_HOST'], $business_path);
-}
-/**
- * Queries the API by the input values from the user 
- * 
- * @param    $term        The search term to query
- * @param    $location    The location of the business to query
- */
-function query_api($term, $location) {     
-    $response = json_decode(search($term, $location));
-    $business_id = $response->businesses[0]->id;
-    
-    print sprintf(
-        "%d businesses found, querying business info for the top result \"%s\"\n\n",         
-        count($response->businesses),
-        $business_id
-    );
-    
-    $response = get_business($business_id);
-    
-    print sprintf("Result for business \"%s\" found:\n", $business_id);
-    $pretty_response = json_encode(json_decode($response), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    print "$pretty_response\n";
+
+switch($method)
+{
+    /**
+     * Query the Search API by a search term and location 
+     * 
+     * @param    $term        The search term passed to the API 
+     * @param    $location    The search location passed to the API 
+     * @return   The JSON response from the request 
+     */
+    if( isset($_GET['$term']) && isset($_GET['$location']) )
+    {
+        echo "heallo!";
+         $url_params = array();
+        
+        $url_params['term'] = $term;
+        $url_params['location'] = $location;
+        $url_params['limit'] = $GLOBALS['SEARCH_LIMIT'];
+        return request($GLOBALS['API_HOST'], $GLOBALS['SEARCH_PATH'], $url_params);
+        
+    }
+    // function search($term, $location) {
+    //     $url_params = array();
+        
+    //     $url_params['term'] = $term;
+    //     $url_params['location'] = $location;
+    //     $url_params['limit'] = $GLOBALS['SEARCH_LIMIT'];
+        
+    //     return request($GLOBALS['API_HOST'], $GLOBALS['SEARCH_PATH'], $url_params);
+    // }
+    /**
+     * Query the Business API by business_id
+     * 
+     * @param    $business_id    The ID of the business to query
+     * @return   The JSON response from the request 
+     */
+    function get_business($business_id) {
+        $business_path = $GLOBALS['BUSINESS_PATH'] . urlencode($business_id);
+        
+        return request($GLOBALS['API_HOST'], $business_path);
+    }
+    /**
+     * Queries the API by the input values from the user 
+     * 
+     * @param    $term        The search term to query
+     * @param    $location    The location of the business to query
+     */
+    function query_api($term, $location) {     
+        $response = json_decode(search($term, $location));
+        $business_id = $response->businesses[0]->id;
+        
+        print sprintf(
+            "%d businesses found, querying business info for the top result \"%s\"\n\n",         
+            count($response->businesses),
+            $business_id
+        );
+        
+        $response = get_business($business_id);
+        
+        print sprintf("Result for business \"%s\" found:\n", $business_id);
+        $pretty_response = json_encode(json_decode($response), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        print "$pretty_response\n";
+    }
 }
 /**
  * User input is handled here 
