@@ -63,14 +63,14 @@
               <label class="input_floaty_text">
                 First Name<span class="req">*</span>
               </label>
-              <input class="form-input" type="text" required autocomplete="off" />
+              <input id="first-name" class="form-input" type="text" required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label class="input_floaty_text">
                 Last Name<span class="req">*</span>
               </label>
-              <input class="form-input" type="text"required autocomplete="off"/>
+              <input id="last-name" class="form-input" type="text"required autocomplete="off"/>
             </div>
           </div>
 
@@ -78,17 +78,17 @@
             <label class="input_floaty_text">
               Email Address<span class="req">*</span>
             </label>
-            <input class="form-input" type="email"required autocomplete="off"/>
+            <input id="email-address" class="form-input" type="email"required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label class="input_floaty_text">
               Set A Password<span class="req">*</span>
             </label>
-            <input class="form-input" type="password"required autocomplete="off"/>
+            <input id="set-password" class="form-input" type="password"required autocomplete="off"/>
           </div>
           
-          <button type="submit" class="special button button-signup button-block"/>Get Started</button>
+          <button id="getstarted" class="special button button-signup button-block"/>Get Started</button>
           
           </form>
 
@@ -115,7 +115,7 @@
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
           
-          <button class="special button button-block"/>Log In</button>
+          <button type="submit" class="special button button-block"/>Log In</button>
           
           </form>
 
@@ -204,6 +204,48 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(600);
   
 });
+</script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDCLvHCPtoxRekAkEjTF7CjMxdi6hVEwvg",
+    authDomain: "coolcool-815c5.firebaseapp.com",
+    databaseURL: "https://coolcool-815c5.firebaseio.com",
+    projectId: "coolcool-815c5",
+    storageBucket: "",
+    messagingSenderId: "671447568645"
+  };
+  firebase.initializeApp(config);
+  // Get a reference to the database service
+  var database = firebase.database();
+  
+  $("#getstarted").click(function() 
+  {
+	  
+	  var first_name = $('#first-name').val();
+	  var last_name = $('#last-name').val();
+	  var email_add = $('#email-address').val();
+	  var setpass = $('#set-password').val();
+	 
+	  //If there is no values, don't send to database
+	  if (first_name.length == 0 || last_name.length == 0 || email_add.length == 0 || setpass.length == 0)
+	  {
+		//If one input empty, do nothing
+	  }
+	  else {
+		  firebase.database().ref('userselections/' + email_add).set({
+			firstname: first_name,
+			lastname: last_name,
+			emailaddress: email_add,
+			password: setpass
+		  });
+	  }
+	  
+	  $('#getstarted').val() = "SIGNED UP!";
+  
+  });
+  
 </script>
 	</body>
 </html>
