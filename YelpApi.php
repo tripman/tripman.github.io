@@ -17,6 +17,7 @@
 // API key placeholders that must be filled in by users.
 // You can find it on
 // https://www.yelp.com/developers/v3/manage_app
+// Authorization: Bearer "HicxRct53L2Rn7jwzBTJgu5OgFSM9jCaob3wIIfdOCvRbiN5_4Q7u69eBWXioeUNe6LAwmV7HtgX7UX7YNWLCTLdptk7uViGrgKDSujfwv-uWHhYb8ViKZ1XIHljWnYx";
 $API_KEY = "HicxRct53L2Rn7jwzBTJgu5OgFSM9jCaob3wIIfdOCvRbiN5_4Q7u69eBWXioeUNe6LAwmV7HtgX7UX7YNWLCTLdptk7uViGrgKDSujfwv-uWHhYb8ViKZ1XIHljWnYx";
 // Complain if credentials haven't been filled out.
 assert($API_KEY, "Please supply your API key.");
@@ -111,7 +112,25 @@ function get_business($business_id) {
  */
 //function query_api($term, $location){
 
-if( !isset($_GET['location']) && $_GET['term'] ){
+// if( !isset($_GET['location']) && $_GET['term'] ){
+//     echo "hello";
+//     $response = json_decode(search($term, $location));
+//     $business_id = $response->businesses[0]->id;
+
+//     print sprintf(
+//         "%d businesses found, querying business info for the top result \"%s\"\n\n",
+//         count($response->businesses),
+//         $business_id
+//     );
+
+//     $response = get_business($business_id);
+
+//     print sprintf("Result for business \"%s\" found:\n", $business_id);
+//     $pretty_response = json_encode(json_decode($response), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+//     print "$pretty_response\n";
+// }
+
+if( isset($_GET['location']) && isset($_GET['term']) ){
     echo "hello";
     $response = json_decode(search($term, $location));
     $business_id = $response->businesses[0]->id;
@@ -140,7 +159,7 @@ $options = getopt("", $longopts);
 $term = $options['term'] ?: $GLOBALS['DEFAULT_TERM'];
 $location = $options['location'] ?: $GLOBALS['DEFAULT_LOCATION'];
 
-query_api($term, $location);
+//query_api($term, $location);
 ?>
 
 

@@ -108,13 +108,12 @@
      <script>
         $( document ).ready(function(){
             console.log("ready!");
-            $dest = "Mauii, Hawaii";
-            $term = "food";
-            $values = jQuery.ajax({
+            var dataS={location:"Mauii, Hawaii", term:"food"};
+            var values = jQuery.ajax({
                 type: "GET",
                 url: 'https://api.yelp.com/v3/businesses/search',
                 dataType: 'jsonp',
-                data: {location: $dest, term: $term},
+                data: dataS,
 
                 success: function (obj, textstatus) 
                 {
@@ -127,8 +126,8 @@
                         console.log(obj.error);
                     }
                  }
-});
-        });
-
+              });
+        console.log(values);
+         });
      </script>
   </html>
