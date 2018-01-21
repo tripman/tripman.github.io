@@ -96,9 +96,10 @@ label {
 }
 
 label.active {
-  transform:translateY(50px);
+  transform:translateY(-25px);
+    margin-left: 0px;
   left:2px;
-  font-size:14px;
+  font-size:12px;
   .req {
     opacity:0;
   }
@@ -163,6 +164,8 @@ textarea {
   text-transform:uppercase;
   letter-spacing:.1em;
   background:$main;
+    border-radius: 10px;
+    padding-bottom: 100px;
   color:#ffffff;
   background-color: #629DD1;
   transition:all.5s ease;

@@ -30,7 +30,7 @@
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1><a href="#">TripMan</a></h1>
+				<h1><a href="index.html">TripMan</a></h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -46,11 +46,11 @@
 			
 		<!-- Login signup form -->
 		<div class="form">
-      
-      <ul class="tab-group">
-        <li class="tab active" href="#signup"><a class="formtabs formtabs2" href="#signup">Sign Up</a></li>
-        <li class="tab"><a class="formtabs formtabs2 button-block" href="#login">Log In</a></li>
-      </ul>
+        <div id="signup_login_top" class="tab-group">
+            <span class="tab active" href="#signup"><a class="button special formtabs formtabs2" href="#signup">Sign Up</a></span>
+            <span class="tab" href="#signup"><a class="button special formtabs formtabs2 " href="#login">Log In</a></span>
+        </div>
+        
       
       <div class="tab-content">
         <div id="signup">   
@@ -60,14 +60,14 @@
           
           <div class="top-row">
             <div class="field-wrap">
-              <label>
+              <label class="input_floaty_text">
                 First Name<span class="req">*</span>
               </label>
               <input class="form-input" type="text" required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
-              <label>
+              <label class="input_floaty_text">
                 Last Name<span class="req">*</span>
               </label>
               <input class="form-input" type="text"required autocomplete="off"/>
@@ -75,20 +75,20 @@
           </div>
 
           <div class="field-wrap">
-            <label>
+            <label class="input_floaty_text">
               Email Address<span class="req">*</span>
             </label>
             <input class="form-input" type="email"required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
-            <label>
+            <label class="input_floaty_text">
               Set A Password<span class="req">*</span>
             </label>
             <input class="form-input" type="password"required autocomplete="off"/>
           </div>
           
-          <button type="submit" class="button-signup button-block"/>Get Started</button>
+          <button type="submit" class="special button button-signup button-block"/>Get Started</button>
           
           </form>
 
@@ -100,14 +100,14 @@
           <form action="/" method="post">
           
             <div class="field-wrap">
-            <label>
+            <label  class="input_floaty_text">
               Email Address<span class="req">*</span>
             </label>
             <input class="form-input" type="email"required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
-            <label>
+            <label  class="input_floaty_text">
               Password<span class="req">*</span>
             </label>
             <input class="form-input" type="password"required autocomplete="off"/>
@@ -115,7 +115,7 @@
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
           
-          <button class="button button-block"/>Log In</button>
+          <button class="special button button-block"/>Log In</button>
           
           </form>
 
