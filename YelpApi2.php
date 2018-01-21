@@ -109,9 +109,9 @@ function get_business($business_id) {
  * @param    $term        The search term to query
  * @param    $location    The location of the business to query
  */
-//function query_api($term, $location){
+function query_api($term, $location){
 
-if( !isset($_GET['location']) && $_GET['term'] ){
+//if( !isset($_GET['location']) && $_GET['term'] ){
     echo "hello";
     $response = json_decode(search($term, $location));
     $business_id = $response->businesses[0]->id;
@@ -139,8 +139,5 @@ $longopts  = array(
 $options = getopt("", $longopts);
 $term = $options['term'] ?: $GLOBALS['DEFAULT_TERM'];
 $location = $options['location'] ?: $GLOBALS['DEFAULT_LOCATION'];
-
 query_api($term, $location);
 ?>
-
-
