@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<!--
+	Ion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>TripMan</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="css/animate.min.css">
+			
+			
+			</noscript>
+			<link rel="stylesheet" href="css/formstyle.css" />
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="index.html">TripMan</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+        
+						<li><input placeholder="Email" type="email" class="input_text" name="header-email" id="header-email" tabindex="1"></li>
+						<li><input placeholder="Password" type="password" class="input_text" name="header-pass" id="header-pass" tabindex="2"></li>
+                        
+						<li><a href="#" class="button special">Log In</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+		<!-- Login signup form -->
+		<div class="form">
+        <div id="signup_login_top" class="tab-group">
+            <span class="tab active" href="#signup"><a class="button special formtabs formtabs2" href="#signup">Sign Up</a></span>
+            <span class="tab" href="#signup"><a class="button special formtabs formtabs2 " href="#login">Log In</a></span>
+        </div>
+        
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+          <form action="/" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label class="input_floaty_text">
+                First Name<span class="req">*</span>
+              </label>
+              <input class="form-input" type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label class="input_floaty_text">
+                Last Name<span class="req">*</span>
+              </label>
+              <input class="form-input" type="text"required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label class="input_floaty_text">
+              Email Address<span class="req">*</span>
+            </label>
+            <input class="form-input" type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label class="input_floaty_text">
+              Set A Password<span class="req">*</span>
+            </label>
+            <input class="form-input" type="password"required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="special button button-signup button-block"/>Get Started</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label  class="input_floaty_text">
+              Email Address<span class="req">*</span>
+            </label>
+            <input class="form-input" type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label  class="input_floaty_text">
+              Password<span class="req">*</span>
+            </label>
+            <input class="form-input" type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="special button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>About TripMan</h3>
+									<ul class="alt">
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>Our Mission</h2>
+							<p>TripMan aims to make planning your next trip as easy as possible. We offer user-friendly navigation, starting from finding the best prices for flight tickets and hotels to building an itinerary curated specifically just for you. </p>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li>&copy; TripMan. All rights reserved.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+<script>	
+//Form animation
+	$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight'); 
+			} else {
+		    label.removeClass('highlight');   
+			}   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight'); 
+			} 
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(600);
+  
+});
+</script>
+	</body>
+</html>
